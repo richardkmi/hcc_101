@@ -33,12 +33,14 @@ most_recent_dx = st.selectbox('Current year dx is most recent for patient and HC
 if most_recent_dx == "Ignore":
   dat = dict(prev_year_dx=[prev_year_dx],
            curr_year_dx =[curr_year_dx],
+           dx_match = prev_year_dx == curr_year_dx,
            hcc_match = not caregap_hcc_level,
            caregap_dx =[caregap_dx_level],
            caregap_hcc = [caregap_hcc_level])
 else:
   dat = dict(prev_year_dx=[prev_year_dx],
            curr_year_dx =[curr_year_dx],
+           dx_match = prev_year_dx == curr_year_dx,
            hcc_match = not caregap_hcc_level,
            caregap_dx =[caregap_dx_level and most_recent_dx],
            caregap_hcc = [caregap_hcc_level and most_recent_dx])
