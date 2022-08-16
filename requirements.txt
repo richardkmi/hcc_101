@@ -1,2 +1,4 @@
 hccpy
 pandas
+streamlit
+click==8
